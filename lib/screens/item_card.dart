@@ -2,31 +2,34 @@ import 'package:flutter/material.dart';
 import 'package:shopui/models/product.dart';
 
 class ItemCard extends StatelessWidget {
-  final Product? product;
-  final Function? press;
-  const ItemCard({
+   Product? product;
+   VoidCallback? press;
+   ItemCard({
     Key? key,
-    this.product,
-    this.press,
+      this.product,
+     this.press,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          padding: const EdgeInsets.all(20),
-          height: 200,
-          width: 160,
-          decoration: BoxDecoration(
-              color: product!.color,
-              borderRadius: BorderRadius.circular(16)),
-          child: Image.asset(product!.image!),
-        ),
-        Text(product!.title!),
-        Text("\$${product!.price}"),
-      ],
+    return GestureDetector(
+      onTap: press,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(20),
+            height: 200,
+            width: 160,
+            decoration: BoxDecoration(
+                color: product!.color,
+                borderRadius: BorderRadius.circular(16)),
+            child: Image.asset(product!.image!),
+          ),
+          Text("${product!.title}"),
+          Text("\$${product!.price}"),
+        ],
+      ),
     );
   }
 }

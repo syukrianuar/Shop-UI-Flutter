@@ -19,7 +19,7 @@ List<Product> products = [
   Product(
       id: 1,
       title: "Office Code",
-      price: 234,
+      price: 123,
       size: 12,
       description: dummyText,
       image: "assets/images/bag_1.png",
@@ -35,7 +35,7 @@ List<Product> products = [
   Product(
       id: 3,
       title: "Hang Top",
-      price: 234,
+      price: 345,
       size: 10,
       description: dummyText,
       image: "assets/images/bag_3.png",
@@ -43,7 +43,7 @@ List<Product> products = [
   Product(
       id: 4,
       title: "Old Fashion",
-      price: 234,
+      price: 456,
       size: 11,
       description: dummyText,
       image: "assets/images/bag_4.png",

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopui/models/product.dart';
 import 'package:shopui/screens/categories.dart';
+import 'package:shopui/screens/details.dart';
 import 'package:shopui/screens/item_card.dart';
 
 class Body extends StatefulWidget {
@@ -26,8 +27,15 @@ class _BodyState extends State<Body> {
                 itemCount: products.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2, childAspectRatio: 0.8),
-                itemBuilder: (context, index) =>
-                    ItemCard(product: products[index]))),
+                itemBuilder: (context, index) => ItemCard(
+                    product: products[index],
+                    press: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  DetailsScreen(product: products[index])));
+                    }))),
       ],
     );
   }
