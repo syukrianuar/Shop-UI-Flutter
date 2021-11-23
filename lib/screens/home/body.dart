@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shopui/models/product.dart';
-import 'package:shopui/screens/categories.dart';
-import 'package:shopui/screens/details.dart';
-import 'package:shopui/screens/item_card.dart';
+import 'package:shopui/screens/home/categories.dart';
+import 'package:shopui/screens/details/details.dart';
+import 'package:shopui/screens/home/item_card.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);

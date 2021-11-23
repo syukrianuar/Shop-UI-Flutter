@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shopui/screens/body.dart';
+import 'package:shopui/screens/home/body.dart';
 import 'package:shopui/styles.dart';
 
 class HomeScreen extends StatefulWidget {

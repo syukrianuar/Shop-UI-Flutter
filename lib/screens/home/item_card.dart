@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:shopui/models/product.dart';
 
 class ItemCard extends StatelessWidget {
-   Product? product;
-   VoidCallback? press;
-   ItemCard({
+  Product? product;
+  VoidCallback? press;
+  ItemCard({
     Key? key,
-      this.product,
-     this.press,
+    this.product,
+    this.press,
   }) : super(key: key);
 
   @override
@@ -22,8 +22,7 @@ class ItemCard extends StatelessWidget {
             height: 200,
             width: 160,
             decoration: BoxDecoration(
-                color: product!.color,
-                borderRadius: BorderRadius.circular(16)),
+                color: product!.color, borderRadius: BorderRadius.circular(16)),
             child: Image.asset(product!.image!),
           ),
           Text("${product!.title}"),
