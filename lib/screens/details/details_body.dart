@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:shopui/models/product.dart';
+import 'package:shopui/screens/details/color_size.dart';
 import 'package:shopui/screens/details/product_title_image.dart';
 
 class DetailsBody extends StatelessWidget {
@@ -30,44 +31,7 @@ class DetailsBody extends StatelessWidget {
                           topRight: Radius.circular(24))),
                   child: Column(
                     children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text("Color"),
-                                Row(
-                                  children: [
-                                    ColorDot(
-                                      color: Colors.blue,
-                                      isSelected: true,
-                                    ),
-                                    ColorDot(
-                                      color: Colors.amber,
-                                    ),
-                                    ColorDot(
-                                      color: Colors.pink,
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                          RichText(
-                            text: TextSpan(
-                              style: TextStyle(color: Colors.black),
-                              children: [
-                                TextSpan(text: "Size\n"),
-                                TextSpan(
-                                    text: "${product!.size} cm",
-                                    style:
-                                        Theme.of(context).textTheme.headline5!.copyWith(fontWeight: FontWeight.bold))
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
+                      ColorAndSize(product: product),
                     ],
                   ),
                 ),
