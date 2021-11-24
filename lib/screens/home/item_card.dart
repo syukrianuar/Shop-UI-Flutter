@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopui/models/product.dart';
 
+// ignore: must_be_immutable
 class ItemCard extends StatelessWidget {
   Product? product;
   VoidCallback? press;

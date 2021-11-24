@@ -21,6 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   AppBar buildAppBar() {
     return AppBar(
+      elevation: 0,
       backgroundColor: Colors.white,
       leading: IconButton(
         icon: SvgPicture.asset('assets/icons/back.svg'),
